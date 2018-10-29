@@ -1,0 +1,5 @@
+TOP_OCCUPATIONS;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE
+Accountants and Auditors;1;25.0%
+Computer Programmers;1;25.0%
+Optometrists;1;25.0%
+Software Developers, Applications;1;25.0%
