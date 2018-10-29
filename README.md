@@ -70,13 +70,13 @@ You can run the tests with the following commands:
 
 The script does not load the entire file into memory so we can handle large files.  Instead it 
 reads the input csv file line by line.  This is done in batches.  For each batch we create two 
-lists in memory, one containing the occupation values and another containing the state values.  
-Then we count the values in the batch.
+lists in memory, one containing the occupation values and another containing the state values. 
+Then we update the Counters using the lists.
 
-We avoid sorting the dataset until after we aggregate on occupation and state.
+We avoid sorting the dataset until after we aggregate on occupation and state.  We assume that both 
+aggregate datesets with fit in memory at the same time.  This is reasonable because we know there's 
+only 50 states and ~6500 SOC codes.
 
-We assume that both aggregate datesets with fit in memory at the same time.  This is reasonable 
-because we know there's only 50 states and ~6500 SOC codes.
 
 
 # Issues / TODO
