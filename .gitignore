@@ -5,6 +5,7 @@
 
 /input/*
 !/input/README.md
+!/input/h1b_input.csv
 /output/*
 !/output/README.md
 /insight_testsuite/results.txt
