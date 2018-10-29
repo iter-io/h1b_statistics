@@ -4,7 +4,7 @@
 3. [Output Files](/output/README.md)
 4. [Tests](README.md#tests)
 5. [Approach](README.md#approach)
-6  [Issues / TODO](README.md#issues-/-todo)
+6. [Issues / TODO](README.md#issues-/-todo)
 
 
 # Problem
@@ -40,7 +40,7 @@ CSV with the following steps:
 3.  Use the 'File Format' drop down menu to select 'Comma Separated Value (.csv)'.
 4.  Click 'Save'
 
-You can also convert xlsx file to csv on the command line using a library such as [xlsx2csv](https://github.com/dilshod/xlsx2csv).
+You can also convert the xlsx file to csv on the command line using a library such as [xlsx2csv](https://github.com/dilshod/xlsx2csv).
 
 Additional usage info is available on the command line using the `--help` or `-h` option:
 
@@ -89,4 +89,5 @@ because we know there's only 50 states and ~6500 SOC codes.
 
 # Contact Us
 
-This project was created at the request the [Insight Data Engineering Fellows Program](https://insightdataengineering.com). 
+This project was created at the request of the 
+[Insight Data Engineering Fellows Program](https://insightdataengineering.com). 

@@ -91,8 +91,6 @@ def certified_application_batches(csv_file_path, batch_size):
     """
     Returns an iterator for each batch for certified applications.
 
-    https://stackoverflow.com/questions/4956984/how-do-you-split-reading-a-large-csv-file-into-evenly-sized-chunks-in-python
-
     :param csv_file_path:
     :param batch_size:
     :return:

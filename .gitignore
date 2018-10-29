@@ -3,10 +3,10 @@
 #  Project specific files  #
 ##                        ##
 
-/input/
+/input/*
 !/input/README.md
-/output/
-!output/README.md
+/output/*
+!/output/README.md
 /insight_testsuite/results.txt
 /insight_testsuite/temp/
 
