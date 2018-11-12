@@ -56,6 +56,7 @@ Additional usage info is available on the command line using the `--help` or `-h
       -s FILE_PATH, --states-output-file FILE_PATH
                             File path of the output file for writing a report on
                             Top 10 States
+      -p, --profile         Enable this flag to the profile the script
 
 
 # Tests

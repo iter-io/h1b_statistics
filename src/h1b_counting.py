@@ -1,13 +1,14 @@
 
 from argparse import ArgumentParser
 from collections import Counter
+from cProfile import Profile
 from csv import DictReader, DictWriter, Sniffer
+from io import StringIO
 from itertools import chain, filterfalse, islice
 from os import path
-from time import perf_counter
+from pstats import SortKey, Stats
 
-
-def main():
+def main(args):
     """
     Main function that does the counting.  For each batch of applications we create two lists in
     memory, one containing the occupation values and another containing the state values.  Then we
@@ -15,9 +16,6 @@ def main():
 
     :return:
     """
-    # Parse the command line args
-    args = get_args()
-
     state_counter = Counter()
     occupation_counter = Counter()
 
@@ -225,6 +223,12 @@ def get_args():
         metavar="FILE_PATH"
     )
 
+    parser.add_argument(
+        "-p", "--profile",
+        action="store_true", dest="profile", default=False,
+        help="Enable this flag to the profile the script"
+    )
+
     args = parser.parse_args()
 
     # Check if the file paths from the user are valid
@@ -237,8 +241,13 @@ def get_args():
 
 
 if __name__ == "__main__":
-    start = perf_counter()
-    main()
-    stop = perf_counter()
-    print('Runtime: {0}s'.format(round(stop - start, 2)))
-
+    args = get_args()
+    if args.profile:
+        profile = Profile()
+        profile.enable()
+        main(args)
+        profile.disable()
+        profile_stats = Stats(profile).sort_stats(SortKey.CUMULATIVE)
+        profile_stats.print_stats()
+    else:
+        main(args)
